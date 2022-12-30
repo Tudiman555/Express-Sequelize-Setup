@@ -1,0 +1,14 @@
+# Dependency directory
+node_modules
+bower_components
+
+# Ignore built ts files
+dist/**/*
+package-lock.json
+
+# Ignore Logs
+logs/**/*
+
+
+
+
