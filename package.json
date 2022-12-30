@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "watch-ts": "tsc -w",
-    "watch-node" : "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-node": "nodemon dist/server.js",
+    "watch-debug": "npm run watch-ts & npm run watch-node"
   },
   "keywords": [
     "nodejs",
@@ -30,6 +30,7 @@
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.20",
     "@types/bcrypt": "^5.0.0",
     "@types/body-parser": "^1.19.2",
     "@types/cookie-parser": "^1.4.3",
