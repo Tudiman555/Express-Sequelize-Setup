@@ -4,6 +4,7 @@
   "description": "A starter express server setup",
   "main": "server.js",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "watch-ts": "tsc -w",
     "watch-node": "nodemon dist/server.js",
     "watch-debug": "npm run watch-ts & npm run watch-node"
@@ -30,7 +31,6 @@
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
     "@types/bcrypt": "^5.0.0",
     "@types/body-parser": "^1.19.2",
     "@types/cookie-parser": "^1.4.3",
@@ -41,6 +41,13 @@
     "@types/jsonwebtoken": "^9.0.0",
     "@types/node": "^18.11.18",
     "@types/sequelize": "^4.28.14",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.1",
     "typescript": "^4.9.4"
   }
 }
