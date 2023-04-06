@@ -11,6 +11,8 @@ logs/**/*
 
 .DS_STORE
 
+.env
+
 
 
 

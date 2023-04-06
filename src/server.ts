@@ -1,5 +1,6 @@
 import { ExpressApp } from "./app";
+import { APP_PORT } from "./secrets";
 
 const app = new ExpressApp();
 
-app.start(4001);
+app.start(APP_PORT);
