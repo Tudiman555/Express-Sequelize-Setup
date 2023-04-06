@@ -48,15 +48,15 @@
 
 ### Project Configuration :
 
-- 1. Create a Entry File Named `server.js`
+- 1. Create a Entry File Named `server.ts`
 
-> `touch server.js`
+> `touch server.ts`
 
 This will be your app entry file
 
-- 2. Create a Express Server with a Port Inside `server.js`
+- 2. Create a Express Server with a Port Inside `server.ts`
 
-````
+```js
 import * as express from "express";
 
 const app = express();
@@ -70,14 +70,13 @@ app.listen(port, () => {
   console.log(`App is listening on port ${port}`);
 });
 
-```js
-````
+```
 
 - 3. Configure Typescript
 
 > Create a file named `tsconfig.json` in the root dir of the project and add the following configuration
 
-````
+```json
 {
   "compilerOptions": {
     "outDir": "dist",
@@ -88,8 +87,7 @@ app.listen(port, () => {
   "include": ["src/**/*"]
 }
 
-```json
-````
+```
 
 `include` --> specifies which directory you want typescipt to transpile/watch
 `outDir` --> specifies in which directory should transpiled file go to
@@ -99,21 +97,20 @@ app.listen(port, () => {
 > Inside `package.json` Specify the name of the entry file of the server under `main` field which will the `server.js` it will be transpiled by typescript
 > Inside `package.json` Add the Following scripts under `scripts` field
 
-````
+```json
  "watch-ts": "tsc -w",
  "watch-node": "nodemon dist/server.js",
  "watch-debug": "npm run watch-ts & npm run watch-node"
 
-```json
-````
+```
 
-`watch-ts` --> instructs typescript to watch files in directory specified in `tsconfig.json` for changes and transpile the ts files into js and store the   result in `dist` directory  as specified in `tsconfig.json`
+`watch-ts` --> instructs typescript to watch files in directory specified in `tsconfig.json` for changes and transpile the ts files into js and store the result in `dist` directory as specified in `tsconfig.json`
 
 `watch-node` --> run the transpiled files and automatically re-run the files everytime file changes.
 
 `watch-debug` --> performs transpiling and execution concurrently [`This Command will be used to run the app`]
 
-- 5. Running the App 
+- 5. Running the App
 
 > Inside the root Directory run the following command
 
@@ -123,6 +120,24 @@ you can see the server running on `localhost:4001` inside browser
 
 And Done !!!
 
+- 6. Adding Squelize with typescript
+
+`npm install --save-dev @types/node @types/validator`
+`npm install reflect-metadata sequelize-typescript`
+
+Enable use of Decorators in your tsconfig.json :
+
+```json
+"target": "es6", // or a more recent ecmascript version
+"experimentalDecorators": true,
+"emitDecoratorMetadata": true
+```
+
+Add the above properties to `compilerOptions`
+
+- 7. Initialize the Database and test your connection
+
+Refer ./src/services/database.service.ts
 
 
 

@@ -28,7 +28,9 @@
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.28.0"
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.28.0",
+    "sequelize-typescript": "^2.1.5"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -41,6 +43,7 @@
     "@types/jsonwebtoken": "^9.0.0",
     "@types/node": "^18.11.18",
     "@types/sequelize": "^4.28.14",
+    "@types/validator": "^13.7.10",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
     "eslint": "^8.31.0",

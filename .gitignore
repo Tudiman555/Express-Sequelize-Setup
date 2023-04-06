@@ -9,6 +9,8 @@ package-lock.json
 # Ignore Logs
 logs/**/*
 
+.DS_STORE
+
 
 
 
